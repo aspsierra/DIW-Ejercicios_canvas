@@ -1,0 +1,67 @@
+x
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas canvas</title>
+    <script src="./scripts/main.js"></script>
+</head>
+
+<body>
+    <section>
+        <h3>Ejemplos Canvas</h3>
+    </section>
+    <section>
+        <h4>Lienzo con degradado</h4>
+    </section>
+    <canvas id="canvas1" width="1200" height="60" style="border: 1px solid #000000;"></canvas>
+
+
+    <canvas id="miCanvas" width="1200" height="600" style="border: 1px solid #000000;">
+        Tu navegador no soporta canvas
+    </canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas1");
+        var ctx1 = canvas.getContext('2d');
+        var canvas = document.getElementById("miCanvas");
+        var ctx = canvas.getContext('2d');
+        var contador = 0;
+        degradador();
+        linea(0, 0, 800, 600);
+        circulo(400, 300, "yellow");
+        triangulo(400, 220, 330, 350, 470, 350);
+        triangulo(400, 390, 330, 260, 470, 260);
+
+
+        //dibujaBalon();
+        //dibujaBalon(x2, y2, dx2, dy2);
+        var x1 = canvas.width / 2
+        var y1 = canvas.height / 2
+
+        var palaW = 75;
+        var palaH = 10;
+        var palaX = (canvas.width - palaW) / 2;
+        /*var x2 = x1 + 100;
+        var y2 = y1 + 100;*/
+        var dx1 = -2;
+        var dy1 = -3;
+
+        /*var dx2 = -5;
+        var dy2 = 3;*/
+        //dibujar(x1, y1, dx1, dy1);
+        var derPulsa = false;
+        var izqPulsa = false;
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+
+
+        setInterval(dibujaBalon, 1)
+    </script>
+
+
+</body>
+
+</html>

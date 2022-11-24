@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandera Olímpica</title>
+    <script src="./scripts/main.js"></script>
+</head>
+
+<body>
+
+    <h3>Bandera olímpica</h3>
+    <canvas id="bandera" width="800" height="800" style="border: 0px solid #000000;">
+        Tu navegador no soporta canvas
+    </canvas>
+
+    <script type="text/javascript">
+        var canvasBandera = document.getElementById("bandera");
+        var ctx = canvasBandera.getContext("2d");
+        circulo(100, 200, "blue");
+        circulo(300, 200, "black");
+        circulo(500, 200, "red");
+        circulo(200, 300, "yellow");
+        circulo(400, 300, "green");
+
+        circuloRelleno(300, 500, "red");
+        linea(300 - 60, 500 - 60, 300 + 60, 500 + 60);
+        linea(300 - 60, 500 + 60, 300 + 60, 500 - 60);
+        rectangulo(300 - 70, 500 - 15, 140, 30);
+    </script>
+
+</body>
+
+</html>
